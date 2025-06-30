@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+main {
+  padding-top: 230px;
+}
+.plan {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px 100px 100px 100px;
+  border: 1px solid #8c8c8c;
+  border-radius: 10px;
+  padding: 70px 50px 100px;
+  gap: 20px;
+}
+.sub_title {
+  font-size: 28px;
+}
+.plan label,
+input,
+select,
+h3 {
+  font-size: 24px;
+}
+
+.grid0,
+.grid3,
+.grid6 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid3 {
+  width: 619px;
+}
+.grid0 input {
+  width: 100%;
+  height: 51px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+#selectBox1,
+#selectBox2,
+#selectBox3,
+#selectBox4,
+#selectBox5,
+#selectBox6 {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+#free_text {
+  width: 100%;
+  font-size: 24px;
+  border-radius: 10px;
+}
+.finish {
+  display: inline-block;
+}
+#output {
+  width: 100%;
+  height: auto;
+}
+.planner {
+  position: relative;
+}
+.save {
+  background-color: #247df6;
+  border-radius: 10px;
+  font-size: 28px;
+  color: #fff;
+  width: 530px;
+  height: 55px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.my_plan {
+  height: 300px;
+  background-color: #8c8c8c;
+  padding: 50px;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form 데이터 출력</title>
+    <script>
+      function displayData() {
+        let selectedOption1 = document.getElementById("selectBox1").value;
+        let selectedOption2 = document.getElementById("selectBox2").value;
+        let selectedOption3 = document.getElementById("selectBox3").value;
+        let selectedOption4 = document.getElementById("selectBox4").value;
+        let selectedOption5 = document.getElementById("selectBox5").value;
+        let selectedOption6 = document.getElementById("selectBox6").value;
+        let freeOption = document.getElementById("free_text").value;
+        document.getElementById(
+          "output"
+        ).innerHTML = `<strong>OOO님의 일정은:</strong> <br>${selectedOption1}부터 </strong> <br> <strong>출발지는:</strong> ${selectedOption2} <br> <strong>목적지는:</strong> ${selectedOption3} <br><strong>교통편은:</strong> ${selectedOption5}<strong> 이용하여</strong> <br>  ${selectedOption6}<strong>에서 숙박하는</strong><br>${selectedOption4}<strong>떠나는 여행입니다</strong> <br><strong>그외 세부 계획으로</strong> ${freeOption}<strong>할 예정입니다.</strong>`;
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reset_plan.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/plan_style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header_top grid">
+        <h1>
+          <a href=""><img src="" alt="" />logo</a>
+        </h1>
+        <div class="search_box flex">
+          <label class="blind" for="search">검색어를 입력하세요.</label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="검색어를 입력하세요."
+          />
+          <button type="submit"><span class="blind">검색</span></button>
+        </div>
+
+        <div class="util flex">
+          <div><a href="">로그인</a></div>
+          <div>
+            <button>언어</button>
+            <ul class="" style="display: none">
+              <li><a href="">KR</a></li>
+              <li><a href="">EN</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--//util-->
+      </div>
+      <!--//header_top-->
+      <div class="nav_bg">
+        <nav class="gnb inner">
+          <h2 class="blind">주메뉴</h2>
+          <ul class="main_menu flex">
+            <li><a href="{}">지역</a></li>
+            <li>
+              <a href="">테마여행</a>
+              <ul class="sub_menu">
+                <li><a href="">사계절</a></li>
+                <li><a href="">컨셉여행</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">여행정보</a>
+              <ul class="sub_menu">
+                <li><a href="">교통숙박</a></li>
+                <li><a href="">공연전시</a></li>
+                <li><a href="">축제행사</a></li>
+                <li><a href="">여행리뷰</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">여행혜택</a>
+              <ul class="sub_menu">
+                <li><a href="">프로모션</a></li>
+                <li><a href="">이벤트</a></li>
+              </ul>
+            </li>
+            <li><a href="">나의일정</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="inner">
+      <section class="planner">
+        <h2 class="sub_title">여행 계획</h2>
+        <form action="" class="plan">
+          <div class="grid0">
+            <label for="selectBox1">여행일정</label><br />
+            <input type="date" id="selectBox1" name="plan" />
+          </div>
+          <div class="grid1">
+            <label for="selectBox2">출발지</label>
+            <br />
+            <select id="selectBox2">
+              <option value="서울">서울</option>
+              <option value="경기도">경기도</option>
+              <option value="인천">인천</option>
+              <option value="강원도">강원도</option>
+              <option value="충청북도">충청북도</option>
+              <option value="충청남도">충청남도</option>
+              <option value="대전">대전</option>
+              <option value="경상북도">경상북도</option>
+              <option value="경상남도">경상남도</option>
+              <option value="울산">울산</option>
+              <option value="부산">부산</option>
+              <option value="전라북도">전라북도</option>
+              <option value="전라남도">전라남도</option>
+              <option value="광주">광주</option>
+              <option value="제주도">제주도</option>
+            </select>
+          </div>
+          <div class="grid2">
+            <label for="selectBox3">도착지</label>
+            <br />
+            <select id="selectBox3">
+              <option value="제주도">제주도</option>
+              <option value="서울">서울</option>
+              <option value="경기도">경기도</option>
+              <option value="인천">인천</option>
+              <option value="강원">강원</option>
+              <option value="충청북도">충청북도</option>
+              <option value="충청남도">충청남도</option>
+              <option value="대전">대전</option>
+              <option value="경상북도">경상북도</option>
+              <option value="경상남도">경상남도</option>
+              <option value="울산">울산</option>
+              <option value="부산">부산</option>
+              <option value="전라북도">전라북도</option>
+              <option value="전라남도">전라남도</option>
+              <option value="광주">광주</option>
+            </select>
+          </div>
+          <div class="grid3">
+            <label for="selectBox4">인원</label>
+            <br />
+            <select id="selectBox4">
+              <option value="혼자서">1명</option>
+              <option value="둘이서">2명</option>
+              <option value="셋이서">3명</option>
+              <option value="넷이서">4명</option>
+              <option value="다섯이서">5명</option>
+              <option value="여섯이서">6명</option>
+              <option value="단체로">6인이상</option>
+            </select>
+          </div>
+          <div class="grid4">
+            <label for="selectBox5">교통</label>
+            <br />
+            <select id="selectBox5">
+              <option value="자동차">자동차</option>
+              <option value="렌터카">렌터카</option>
+              <option value="비행기">비행기</option>
+              <option value="기차">기차</option>
+              <option value="버스">버스</option>
+              <option value="자전거">자전거</option>
+              <option value="도보">도보</option>
+            </select>
+          </div>
+          <div class="grid5">
+            <label for="selectBox6">숙박</label>
+            <br />
+            <select id="selectBox6">
+              <option value="호텔&리조트">호텔&리조트</option>
+              <option value="모텔">모텔</option>
+              <option value="펜션&풀빌라">펜션&풀빌라</option>
+              <option value="캠핑">캠핑</option>
+              <option value="게스트하우스">게스트하우스</option>
+            </select>
+          </div>
+          <div class="grid6">
+            <h3>추가 일정 계획하기</h3>
+            <textarea
+              rows="10"
+              id="free_text"
+              placeholder="구체적인 여행계획을 자유롭게 적어주세요"
+            ></textarea>
+          </div>
+        </form>
+        <button type="button" onclick="displayData()" class="save">저장</button>
+      </section>
+      <section>
+        <h2 class="sub_title">나의 일정</h2>
+        <div
+          id="output"
+          style="margin-top: 20px; padding: 10px; border: 1px solid #ccc"
+          class="my_plan"
+        ></div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_bg inner flex">
+        <p class="footer_logo">사방팔방 logo</p>
+        <div class="info_box">
+          <ul class="info flex">
+            <li>
+              <a href=""><strong>개인정보처리방침</strong></a>
+            </li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">위치기반서비스</a></li>
+            <li><a href="">저작권정책</a></li>
+          </ul>
+          <address>
+            <p>
+              <span>경기도 성남시 세계로 100번길</span>
+              <span>이젠타워5층 505호 TEL : 031-234-4080</span>
+            </p>
+            <p>
+              <span>사업자등록번호 : 202-23-4567</span>
+              <span>통신판매업신고 : 제2025-경기성남-0520호</span>
+            </p>
+            <small>
+              Copyright &copy; Trave-48 Corp. All rights reserved.
+            </small>
+          </address>
+        </div>
+        <!--//info_box-->
+        <div class="sns_box flex">
+          <p>
+            <a href=""><img src="image/ins.png" alt="인스타로 이동" /></a>
+          </p>
+          <p>
+            <a href=""><img src="image/ytb.png" alt="유튜브로 이동" /></a>
+          </p>
+          <p>
+            <a href=""><img src="image/fas.png" alt="페이스북으로 이동" /></a>
+          </p>
+        </div>
+      </div>
+      <!--footer_bg-->
+    </footer>
+  </body>
+</html>
